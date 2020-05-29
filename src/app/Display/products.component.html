@@ -1,0 +1,36 @@
+<div style="margin: 10px ;">
+    <button type="button" class="btn btn-success" (click)="create()">Create a Product</button>
+    <br/>
+    <br/>
+    <br/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Descrption</th>
+                <th>MRC</th>
+                <th>NRC</th>
+                <th>Discount</th>
+                <th>CreatedBy</th>
+                <th>Created Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>       
+            <tr *ngFor="let product of products">
+                <td>{{product.productName}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.mrc}}</td>
+                <td>{{product.nrc}}</td>
+                <td>{{product.discount}}</td>
+                <td>{{product.createdBy}}</td>
+                <td>{{product.createdDate}}</td>
+                <td>
+                    <button type="button" class="btn btn-warning" (click)="editEmp(product)" >Edit</button>
+                    &nbsp;
+                    <button type="button" class="btn btn-danger" (click)="deleteEmp(product)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
