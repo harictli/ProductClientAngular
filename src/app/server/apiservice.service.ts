@@ -9,7 +9,7 @@ import { Product } from '../models/product';
 })
 export class ApiserviceService {
 
- // private apiServer = "https://localhost:44384/api/";
+ //private apiServer = "https://localhost:44384/api/";
   private apiServer = "https://product.azurewebsites.net/api/";
   
   httpOptions = {

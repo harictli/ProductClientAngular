@@ -10,7 +10,7 @@ import { ApiserviceService } from '../server/apiservice.service';
 })
 export class CreateComponent implements OnInit {
 
-  empformlabel: string = 'Add Employee';  
+  empformlabel: string = 'Create Product';  
   empformbtn: string = 'Save'; 
 
   constructor(private formBuilder: FormBuilder, private router: Router, private empService: ApiserviceService) { }
@@ -20,11 +20,11 @@ export class CreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.addForm = this.formBuilder.group({
-      productName: ['Angular1',Validators.required],
-      description: ['Test description',Validators.required],
-      mrc: ['5'],
-      nrc: ['5'],
-      discount: ['3'],
+      productName: ['',Validators.required],
+      description: ['',Validators.required],
+      mrc: ['',Validators.required],
+      nrc: ['',Validators.required],
+      discount: [],
       createdBy: ['Admin'],
       createdDate: [],
     });  
@@ -35,7 +35,7 @@ export class CreateComponent implements OnInit {
         this.addForm.patchValue(data);  
       })  
       this.btnvisibility = false;  
-      this.empformlabel = 'Edit Employee';  
+      this.empformlabel = 'Edit Product';  
       this.empformbtn = 'Update';  
     }  
   }
